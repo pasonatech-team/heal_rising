@@ -3,6 +3,6 @@ class HomeController < ApplicationController
     def about
     end 
     
-    def black
+    def breaktime
     end
 end

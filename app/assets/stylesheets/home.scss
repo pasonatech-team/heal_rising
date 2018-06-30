@@ -72,7 +72,7 @@ body#home{
     }
 }
 
-body#black{
+body#break{
     .main-area{
         width :100%;
         margin: 0 auto;
@@ -101,7 +101,7 @@ body#black{
                 padding: 5px;
                 position: absolute;
                 font-size:55px;
-                bottom: 0%;
+                bottom: -8%;
                 background-color: #ff9;
                 min-height: 20%;
             }
