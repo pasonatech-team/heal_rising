@@ -2,49 +2,60 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body#home{
-    .level-area{
-        margin-left: 70%;
-        width: 30%;
-        border: 1px #000 solid;
-        .level-now, .exp-br, .level-next{
-            padding: 5px
-        }
-        .level-now, .exp-br{
-            border-bottom: 1px #000 solid;
-        }
-    }
-        
-    
-    .chara-area{
-        max-width: 100%;
+    .main-area{
+        width :95%;
         margin: 0 auto;
-        text-align: center;
-        position: relative;
-        img{
-            width: 100%;
-           
-            
-        }
-         .talk-area{
+        .level-area{
+            margin-left: 70%;
+            width: 30%;
             border: 1px #000 solid;
-            width: 90%;
-            padding: 10px;
-            position: absolute;
-            left: 5%;
-            bottom: 7%;
-            background-color: #ff9;
-            min-height: 15%;
+            .level-now, .exp-br, .level-next{
+                padding: 10px 20px 10px 20px;
+                font-size:40px;
+            }
+            .level-now, .exp-br{
+                border-bottom: 1px #000 solid;
+            }
         }
-    }
-   
-    
-    .bottom-area{
-        display: flex;
-        text-align: center;
-        width: 100%;
-        .start-bottom, .history-bottom{
-            width: 50%;
-        }
-    }
+            
         
+        .chara-area{
+            max-width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            img{
+                width: 100%;
+               
+                
+            }
+             .talk-area{
+                border: 1px #000 solid;
+                width:100%;
+                padding: 5px;
+                position: absolute;
+                font-size:40px;
+                bottom: 7%;
+                background-color: #ff9;
+                min-height: 15%;
+            }
+        }
+       
+        
+        .bottom-area{
+            display: flex;
+            justify-content:space-around;
+            text-align: center;
+            width: 100%;
+            
+            .start-bottom, .history-bottom{
+                background: #FF9FFF;
+                border: 1px #000 solid;
+                border-radius:100px;
+                padding: 5px 5px;
+                width: 30%;
+                font-size:40px;
+            }
+        }
+    }
 }
