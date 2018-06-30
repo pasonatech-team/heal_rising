@@ -10,29 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180630024206) do
+ActiveRecord::Schema.define(version: 20180630045836) do
 
-  create_table "actions", force: :cascade do |t|
+  create_table "actions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "user_id"
     t.integer "type_id"
-    t.float "start_time"
-    t.float "end_time"
+    t.float "start_time", limit: 24
+    t.float "end_time", limit: 24
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "types", force: :cascade do |t|
-    t.float "strength"
+  create_table "trainings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "user_id"
+    t.integer "type_id"
+    t.float "start_time", limit: 24
+    t.float "end_time", limit: 24
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "types", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.float "strength", limit: 24
     t.string "action_name"
-    t.float "cal"
+    t.float "cal", limit: 24
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
-    t.string "pass"
+    t.string "password"
     t.string "nickname"
+    t.float "experience", limit: 24
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
