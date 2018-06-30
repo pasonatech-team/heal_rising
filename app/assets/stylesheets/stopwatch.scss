@@ -1,0 +1,26 @@
+    .stopwatch-area{
+
+      .stopwatch {
+         font-size: 30px;
+         padding: 50px 0;
+         border: 2px #000000 solid;
+         border-radius: 10px;
+       }
+
+      .start_stop,.end_stop {
+         cursor: pointer;
+         font-size: 18px;
+         width: 145px;
+         background: #eee;
+         height: 40px;
+         line-height: 40px;
+       }
+
+      .start_stop {
+         float: left;
+       }
+
+      .end_stop{
+         float: right;
+       }
+    }
