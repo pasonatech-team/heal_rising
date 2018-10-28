@@ -1,0 +1,61 @@
+body#break{
+    .main-area{
+        width :100%;
+        margin: 0 auto;
+        background-color:#FFF4FF;
+        text-align: center;
+        .time-area{
+            font-size:80px;
+        }
+            
+        }
+            
+        
+        .chara-area{
+            max-width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            img{
+                width: 100%;
+               
+                
+            }
+             .talk-area{
+                border: 1px #000 solid;
+                width:100%;
+                padding: 5px;
+                position: absolute;
+                font-size:55px;
+                bottom: -8%;
+                background-color: #ff9;
+                min-height: 20%;
+            }
+        }
+       
+        
+            .bottom-area{
+                display: flex;
+                justify-content: space-around;
+                text-align: center;
+                width: 100%;
+                height: 14%;
+                padding: 0% 0px;
+                position: absolute;
+                background-color: #AFF4FF;
+                bottom: 0;
+            
+                
+                .back-bottom, .end-bottom,.restart-bottom{
+                    background: #FF9FFF;
+                    border: 1px #000 solid;
+                    border-radius: 100px;
+                    
+                    width: 30%;
+                    font-size: 40px;
+                    margin: 50px;
+                    padding: 42px 0px;
+                }
+            }
+    
+}
