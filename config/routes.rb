@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
 
-    get '/',to:'home#about'
+    get '/home',to:'home#about'
     get '/break',to:'home#breaktime'
+    get '/',to:'home#start'
+    get '/stopwatch',to:'home#stopwatch'
+    get '/result',to:'home#result'
+    get '/select',to:'home#'
 
   resources :trainings
   resources :actions
