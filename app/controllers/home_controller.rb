@@ -5,4 +5,16 @@ class HomeController < ApplicationController
     
     def breaktime
     end
+    
+    def select
+    end
+    
+    def stopwatch
+    end
+    
+    def result
+    end
+    
+    def start
+    end
 end
