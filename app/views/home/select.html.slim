@@ -21,18 +21,8 @@ html
         .bottom-area
             .back-bottom
                 | 戻る
+                link to "戻る" "http://about.html.slim"
             .end-bottom
                 | 終了
             .restart-bottom
                 | 再開
-
-javascript:
-    $('.restart-bottom').click(function () {
-        location.href="../stopwatch";
-    });
-    $('.end-bottom').click(function () {
-        location.href="../result";
-    });
-    $('.back-bottom').click(function () {
-        location.href="/";
-    });

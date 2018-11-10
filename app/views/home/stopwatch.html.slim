@@ -1,0 +1,58 @@
+doctype html
+html
+  head
+    title
+        | ヒールライジング(運動休憩画面）
+    
+  body#break
+    .main-area
+        .home-area
+            .time-area
+                | 00:00:00
+            
+            .chara-area
+                =image_tag("home/reo01.png")
+                
+                .talk-area
+                    | 休憩中
+        
+        
+        
+        .bottom-area
+            .back-bottom
+                | 戻る
+            .end-bottom
+                | 終了
+            .restart-bottom
+                | 休憩
+
+javascript:
+    var timer = new Timer();
+    if (/break$/.test(document.referer)){
+        timer.start();
+    } else{
+        timer.start();
+    }
+    $('.restart-bottom').click(function () {
+        timer.pause();
+        var finishTime = timer.getTimeValues().toString; 
+        location.href="../break";
+    });
+    $('.end-bottom').click(function () {
+        var finishTime = timer.getTimeValues().toString;
+        timer.stop();
+        location.href="../result";
+    });
+    $('.back-bottom').click(function () {
+        timer.reset();
+        location.href="../select";
+    });
+    timer.addEventListener('secondsUpdated', function (e) {
+        $('.time-area').html(timer.getTimeValues().toString());
+    });
+    timer.addEventListener('started', function (e) {
+        $('.time-area').html(timer.getTimeValues().toString());
+    });
+    timer.addEventListener('reset', function (e) {
+        $('.time-area').html(timer.getTimeValues().toString());
+    });
