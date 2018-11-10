@@ -4,6 +4,7 @@ class HomeController < ApplicationController
     end 
     
     def breaktime
+      @time=Action.find_by(id: 1)
     end
     
     def select
