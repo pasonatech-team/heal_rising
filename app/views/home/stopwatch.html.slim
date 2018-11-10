@@ -8,7 +8,7 @@ html
     .main-area
         .home-area
             .time-area
-                | 0時間12分11秒
+                | 00:00:00
             
             .chara-area
                 =image_tag("home/reo01.png")
@@ -25,3 +25,25 @@ html
                 | 終了
             .restart-bottom
                 | 休憩
+
+javascript:
+    var timer = new Timer();
+    timer.start();
+    $('.restart-bottom').click(function () {
+        timer.pause();
+    });
+    $('.end-bottom').click(function () {
+        timer.stop();
+    });
+    $('.back-bottom').click(function () {
+        timer.reset();
+    });
+    timer.addEventListener('secondsUpdated', function (e) {
+        $('.time-area').html(timer.getTimeValues().toString());
+    });
+    timer.addEventListener('started', function (e) {
+        $('.time-area').html(timer.getTimeValues().toString());
+    });
+    timer.addEventListener('reset', function (e) {
+        $('.time-area').html(timer.getTimeValues().toString());
+    });
