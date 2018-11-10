@@ -28,15 +28,24 @@ html
 
 javascript:
     var timer = new Timer();
-    timer.start();
+    if (/break$/.test(document.referer)){
+        timer.start();
+    } else{
+        timer.start();
+    }
     $('.restart-bottom').click(function () {
         timer.pause();
+        var finishTime = timer.getTimeValues().toString; 
+        location.href="../break";
     });
     $('.end-bottom').click(function () {
+        var finishTime = timer.getTimeValues().toString;
         timer.stop();
+        location.href="../result";
     });
     $('.back-bottom').click(function () {
         timer.reset();
+        location.href="../select";
     });
     timer.addEventListener('secondsUpdated', function (e) {
         $('.time-area').html(timer.getTimeValues().toString());
