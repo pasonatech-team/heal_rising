@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-    get '/home',to:'home#about'
+    root to:'home#about'
     get '/break',to:'home#breaktime'
     get '/',to:'home#start'
     get '/stopwatch',to:'home#stopwatch'
