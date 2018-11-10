@@ -28,20 +28,21 @@ html
 
 javascript:
     var timer = new Timer();
-    if (/break$/.test(document.referer)){
+    if (true){
         //breakから遷移したときの処理
+        //「document.referer」でリファラ取得したらいける？
+        //「/break$/.test(document.referer)」?
         timer.start();
     } else{
         timer.start();
     }
     $('.restart-bottom').click(function () {
-        var elapsedTime = timer.getTimeValues().toString;
         timer.pause();
         $.ajax({
            url:"/break",
            type: "GET",
-           data: {content : "successd!"},
-           datatype: "text",
+           data: {content : $(".time-area").text()},
+           datatype: "html",
            success: function(data){
                
            },
