@@ -4,6 +4,8 @@ class HomeController < ApplicationController
     end 
     
     def breaktime
+        @elapsedTime = params[:content]
+        render plain: @elapsedTime
     end
     
     def select

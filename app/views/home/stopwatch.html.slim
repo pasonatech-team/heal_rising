@@ -29,13 +29,27 @@ html
 javascript:
     var timer = new Timer();
     if (/break$/.test(document.referer)){
+        //breakから遷移したときの処理
         timer.start();
     } else{
         timer.start();
     }
     $('.restart-bottom').click(function () {
+        var elapsedTime = timer.getTimeValues().toString;
         timer.pause();
-        var finishTime = timer.getTimeValues().toString; 
+        $.ajax({
+           url:"/break",
+           type: "GET",
+           data: {content : "successd!"},
+           datatype: "text",
+           success: function(data){
+               
+           },
+           error: function(data){
+               
+           }
+           
+        });
         location.href="../break";
     });
     $('.end-bottom').click(function () {
