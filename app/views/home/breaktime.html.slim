@@ -19,9 +19,20 @@ html
         
         
         .bottom-area
-            a class="back-bottom" href="/"
+            .back-bottom
                 | 戻る
             .end-bottom
                 | 終了
             .restart-bottom
                 | 再開
+
+javascript:
+    $('.restart-bottom').click(function () {
+        location.href="../stopwatch";
+    });
+    $('.end-bottom').click(function () {
+        location.href="../result";
+    });
+    $('.back-bottom').click(function () {
+        location.href="/";
+    });
