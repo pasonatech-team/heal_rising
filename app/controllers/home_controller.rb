@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
     
     def about
+      @nowExp=EXP.next_level
     end 
     
     def breaktime
