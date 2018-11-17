@@ -21,6 +21,7 @@ class HomeController < ApplicationController
     def result
       @user=User.find(1)
       @action=Action.find(1)
+    
       times = @action.end_time.split(/:|;/).map do |value|
           value.to_i
       end

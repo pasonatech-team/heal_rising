@@ -9,7 +9,7 @@ html
         .home-area
             
             .time-area
-                | 01:34:56
+                | #{@action.end_time}
             .result-area
                 | 運動しました
             
@@ -27,12 +27,10 @@ html
         .bottom-area
             .level-area
                 .level-now
-                    | LV_XXX
-                /progress id="LoadProgress" max="100" value="50"
-                .exp-br
-                     | EXP
+                    | Lv.#{@user.level} 　exp:#{@user.experience.to_i}
+                progress  max="100" value="#{@user.progress_percent}" 
                 .level-next
-                    | Next_XXX
+                    | 次のレベルまであと#{@user.reft_next_level},#{@user.progress_percent}
                 
             .back-button onclick="location.href='/';" 
                 | ホームへ
