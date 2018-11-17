@@ -4,4 +4,6 @@ class User < ApplicationRecord
     def levelup
         levelup = 500*(self.level-1)+1000
     end
+    
+   
 end
