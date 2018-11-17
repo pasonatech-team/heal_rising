@@ -26,18 +26,18 @@ class HomeController < ApplicationController
     end
     
     def result
-    
       @user=User.find(1)
       @action=Action.find(1)
-      p @action.end_time
-      times = @action.end_time.split(/:|;/).map do |value|
+      end_time = params[:times]
+      end_time ||= "00:00:00"
+      times = end_time.split(/:|;/).map do |value|
           value.to_i
       end
       p times
       p @action
       sec = times[0]*3600 + times[1]*60 + times[2] 
     #   @exp = 100 * @action.type.strength
-       @exp = sec /60 * @action.type.strength
+       @exp = sec * @action.type.strength
 
       @user.experience += @exp
       while true do
