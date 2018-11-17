@@ -10,13 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180630045836) do
-
+ActiveRecord::Schema.define(version: 20181112070229) do
   create_table "actions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "user_id"
     t.integer "type_id"
     t.float "start_time", limit: 24
-    t.float "end_time", limit: 24
+    t.string "end_time", default: "00:00:00", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "exps", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "next_level"
+    t.float "next_experience", limit: 24
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -45,6 +51,8 @@ ActiveRecord::Schema.define(version: 20180630045836) do
     t.float "experience", limit: 24
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "level"
+    t.integer "users_id"
   end
 
 end
