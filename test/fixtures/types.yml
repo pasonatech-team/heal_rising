@@ -1,0 +1,4 @@
+type1:
+  id: 1
+  strength: 7
+  action_name: "ランニング"

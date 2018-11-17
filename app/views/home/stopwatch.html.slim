@@ -64,7 +64,7 @@ javascript:
         var finishTime = timer.getTimeValues().toString;
         //timer.stop();
         timer.pause();
-        $.ajax({
+        /*$.ajax({
            url:"/result",
            type: "GET",
            data: {content : $(".time-area").text()},
@@ -76,8 +76,8 @@ javascript:
                
            }
            
-        });
-        location.href="../result";
+        });*/
+        location.href=`../result?times=${$('.time-area').text()}`;
     });
     $('.back-bottom').click(function () {
         timer.reset();
