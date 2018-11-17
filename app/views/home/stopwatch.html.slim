@@ -23,22 +23,29 @@ html
                 | 戻る
             .end-bottom
                 | 終了
-            .restart-bottom
+            .pause-bottom
                 | 休憩
+            .restart-bottom
+                | 再開
 
 javascript:
     var timer = new Timer();
-    if (true){
+    timer.start();
+    
+    /*if (true){
         //breakから遷移したときの処理
         //「document.referer」でリファラ取得したらいける？
         //「/break$/.test(document.referer)」?
         timer.start();
     } else{
         timer.start();
-    }
+    }*/
     $('.restart-bottom').click(function () {
+        timer.start();
+    });
+    $('.pause-bottom').click(function () {
         timer.pause();
-        $.ajax({
+        /*$.ajax({
            url:"/break",
            type: "GET",
            data: {content : $(".time-area").text()},
@@ -51,11 +58,25 @@ javascript:
            }
            
         });
-        location.href="../break";
+        location.href="../break";*/
     });
     $('.end-bottom').click(function () {
         var finishTime = timer.getTimeValues().toString;
-        timer.stop();
+        //timer.stop();
+        timer.pause();
+        $.ajax({
+           url:"/result",
+           type: "GET",
+           data: {content : $(".time-area").text()},
+           datatype: "html",
+           success: function(data){
+               
+           },
+           error: function(data){
+               
+           }
+           
+        });
         location.href="../result";
     });
     $('.back-bottom').click(function () {

@@ -4,8 +4,10 @@ class HomeController < ApplicationController
     end 
     
     def breaktime
-        @elapsedTime = params[:content]
-        p @elapsedTime
+        # =begin
+        # @elapsedTime = params[:content]
+        # p @elapsedTime
+        # =end
     end
     
     def select
@@ -15,6 +17,8 @@ class HomeController < ApplicationController
     end
     
     def result
+        @elapsedTime = params[:content]
+        p @elapsedTime
     end
     
     def start
