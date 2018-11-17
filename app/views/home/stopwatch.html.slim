@@ -14,7 +14,7 @@ html
                 =image_tag("home/reo01.png")
                 
                 .talk-area
-                    | 休憩中
+                    | 運動中
         
         
         
@@ -42,9 +42,11 @@ javascript:
     }*/
     $('.restart-bottom').click(function () {
         timer.start();
+        $('.talk-area').html("運動中");
     });
     $('.pause-bottom').click(function () {
         timer.pause();
+        $('.talk-area').html("休憩中");
         /*$.ajax({
            url:"/break",
            type: "GET",
@@ -62,8 +64,8 @@ javascript:
     });
     $('.end-bottom').click(function () {
         var finishTime = timer.getTimeValues().toString;
-        //timer.stop();
-        timer.pause();
+        timer.stop();
+        //timer.pause();
         /*$.ajax({
            url:"/result",
            type: "GET",

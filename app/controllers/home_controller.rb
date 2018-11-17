@@ -1,14 +1,10 @@
 class HomeController < ApplicationController
     
     def about
-      
       @user=User.find(1)
-      
-      
-      
       #@now_experience = @user.experience - experience_sum
-      @now_experience = @user.experience
-      @next_experience = @user.levelup - @now_experience 
+      @now_experience = @user.experience.to_i
+      @next_experience = (@user.levelup - @now_experience).to_i 
     end 
     
     def breaktime
@@ -28,14 +24,9 @@ class HomeController < ApplicationController
     def result
       @user=User.find(1)
       @action=Action.find(1)
-<<<<<<< HEAD
-      end_time = params[:times]
-      end_time ||= "00:00:00"
-      times = end_time.split(/:|;/).map do |value|
-=======
-
-      times = @action.end_time.split(/:|;/).map do |value|
->>>>>>> result_view
+      @end_time = params[:times]
+      @end_time ||= "00:00:00"
+      times = @end_time.split(/:|;/).map do |value|
           value.to_i
       end
       p times
