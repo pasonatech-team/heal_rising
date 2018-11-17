@@ -8,10 +8,10 @@ html
     .main-area
         .home-area
             .time-area
-                | 0時間12分11秒
+                = @time.end_time
             
             .chara-area
-                =image_tag("home/reo01.png")
+                =image_tag("home/heal_rising.png")
                 
                 .talk-area
                     | 休憩中
@@ -27,6 +27,7 @@ html
                 | 再開
 
 javascript:
+    var time = new Time();
     $('.restart-bottom').click(function () {
         location.href="../stopwatch";
     });
