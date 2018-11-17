@@ -5,26 +5,27 @@ html
         | ヒールライジング（リザルト画面）
     
   body#result
-    .main-area
-        .home-area
-            
-            .time-area
-                | 01:34:56
-            .result-area
-                | 運動しました
-            
-            
-            
-            .chara-area
+    .all
+        .main-area
+          .home-area
+                .time-area
+                    | 01:34:56
+                .result-area
+                    | 運動しました
                 
-                =image_tag("home/heal_rising.png")
                 
-                .talk-area
+                
+                .chara-area
+                    =image_tag("home/heal_rising.png")
+                    
+                   
+            
+        
+    .bottom-area
+        .talk-area
                     | メッセージは出ないはずだよ
-        
-        
-        
-        .bottom-area
+        .exp-area
+            
             .level-area
                 .level-now
                     | LV_XXX
