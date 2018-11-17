@@ -1,38 +1,38 @@
 class HomeController < ApplicationController
     
     def about
-      @Level1=Exps.find(1)
-      @Level2=Exps.find(2)
-      @Level3=Exps.find(3)
-      @Level4=Exps.find(4)
-      @Level5=Exps.find(5)
-      @Level6=Exps.find(6)
-      @Level7=Exps.find(7)
-      @Level8=Exps.find(8)
-      @Level9=Exps.find(9)
-      @Level10=Exps.find(10)
-      @Level11=Exps.find(11)
-      @Level12=Exps.find(12)
-      @Level13=Exps.find(13)
-      @Level14=Exps.find(14)
-      @Level15=Exps.find(15)
-      @Level16=Exps.find(16)
-      @Level17=Exps.find(17)
-      @Level18=Exps.find(18)
-      @Level19=Exps.find(19)
-      @Level20=Exps.find(20)
-      @Level21=Exps.find(21)
-      @Level22=Exps.find(22)
-      @Level23=Exps.find(23)
-      @Level24=Exps.find(24)
-      @Level25=Exps.find(25)
-      @Level26=Exps.find(26)
-      @Level27=Exps.find(27)
-      @Level28=Exps.find(28)
-      @Level29=Exps.find(29)
-      @Level30=Exps.find(30)
+      @Level1=1000
+      @Level2=1500
+      @Level3=2000
+      @Level4=2500
+      @Level5=3000
+      @Level6=3500
+      @Level7=4000
+      @Level8=4500
+      @Level9=5000
+      @Level10=5500
+      @Level11=6000
+      @Level12=6500
+      @Level13=7000
+      @Level14=7500
+      @Level15=8000
+      @Level16=8500
+      @Level17=9000
+      @Level18=9500
+      @Level19=10000
+      @Level20=10500
+      @Level21=11000
+      @Level22=11500
+      @Level23=12000
+      @Level24=12500
+      @Level25=13000
+      @Level26=13500
+      @Level27=14000
+      @Level28=14500
+      @Level29=15000
+      @Level30=15500
       
-      @user=Users.find(1)
+      @user=User.find(1)
     end 
     
     def breaktime
@@ -40,7 +40,7 @@ class HomeController < ApplicationController
     end
     
     def select
-      # @type=types.find_by(action_name:"")
+      # @type=type.find_by(action_name:"")
     end
     
     def stopwatch
@@ -48,38 +48,38 @@ class HomeController < ApplicationController
     end
     
     def result
-      @Level1=Exps.find(1)
-      @Level2=Exps.find(2)
-      @Level3=Exps.find(3)
-      @Level4=Exps.find(4)
-      @Level5=Exps.find(5)
-      @Level6=Exps.find(6)
-      @Level7=Exps.find(7)
-      @Level8=Exps.find(8)
-      @Level9=Exps.find(9)
-      @Level10=Exps.find(10)
-      @Level11=Exps.find(11)
-      @Level12=Exps.find(12)
-      @Level13=Exps.find(13)
-      @Level14=Exps.find(14)
-      @Level15=Exps.find(15)
-      @Level16=Exps.find(16)
-      @Level17=Exps.find(17)
-      @Level18=Exps.find(18)
-      @Level19=Exps.find(19)
-      @Level20=Exps.find(20)
-      @Level21=Exps.find(21)
-      @Level22=Exps.find(22)
-      @Level23=Exps.find(23)
-      @Level24=Exps.find(24)
-      @Level25=Exps.find(25)
-      @Level26=Exps.find(26)
-      @Level27=Exps.find(27)
-      @Level28=Exps.find(28)
-      @Level29=Exps.find(29)
-      @Level30=Exps.find(30)
+     @Level1=1000
+      @Level2=1500
+      @Level3=2000
+      @Level4=2500
+      @Level5=3000
+      @Level6=3500
+      @Level7=4000
+      @Level8=4500
+      @Level9=5000
+      @Level10=5500
+      @Level11=6000
+      @Level12=6500
+      @Level13=7000
+      @Level14=7500
+      @Level15=8000
+      @Level16=8500
+      @Level17=9000
+      @Level18=9500
+      @Level19=10000
+      @Level20=10500
+      @Level21=11000
+      @Level22=11500
+      @Level23=12000
+      @Level24=12500
+      @Level25=13000
+      @Level26=13500
+      @Level27=14000
+      @Level28=14500
+      @Level29=15000
+      @Level30=15500
       
-      @user=Users.find(1)
+      @user=User.find(1)
     end
     
     def start
