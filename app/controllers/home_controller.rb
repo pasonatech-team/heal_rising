@@ -28,9 +28,14 @@ class HomeController < ApplicationController
     def result
       @user=User.find(1)
       @action=Action.find(1)
+<<<<<<< HEAD
       end_time = params[:times]
       end_time ||= "00:00:00"
       times = end_time.split(/:|;/).map do |value|
+=======
+
+      times = @action.end_time.split(/:|;/).map do |value|
+>>>>>>> result_view
           value.to_i
       end
       p times
@@ -47,7 +52,7 @@ class HomeController < ApplicationController
               break
           end
       end
-    @user.save!
+      @user.save!
     end
     
     def start
