@@ -9,11 +9,14 @@ html
         .home-area
             .level-area
                 .level-now
-                    | LV_XXX
+                    | LV 
+                    = @user.level
                 .exp-br
-                    | EXP
+                    | EXP 
+                    = @now_experience
                 .level-next
-                    | Next_XXX
+                    | Next 
+                    = @next_experience
             
             .chara-area
                 =image_tag("home/heal_rising.png")

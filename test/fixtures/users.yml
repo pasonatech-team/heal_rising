@@ -1,4 +1,11 @@
-user1:
+#user1:
+#  id: 1
+#  name: taro
+#  level: 1
+#  experience: 0
+
+user2:
   id: 1
-  name: taro
-  level: 1
+  name: nanako
+  level: 2
+  experience: 1500
