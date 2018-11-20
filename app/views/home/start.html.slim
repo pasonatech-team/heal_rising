@@ -4,7 +4,11 @@ html
     title
         | ヒールライジング（スタート画面）
     
-  body#home
+  body#start
     .main-area
         =image_tag("home/Heal_rising_aicon.png")
      
+javascript:
+  $('.main-area').click(function () {
+        location.href="/home";
+  });

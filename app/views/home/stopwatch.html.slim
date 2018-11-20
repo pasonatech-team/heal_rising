@@ -11,7 +11,7 @@ html
                 | 00:00:00
             
             .chara-area
-                =image_tag("home/reo01.png")
+                =image_tag("home/heal_rising.png")
                 
                 .talk-area
                     | 運動中
@@ -83,7 +83,7 @@ javascript:
     });
     $('.back-bottom').click(function () {
         timer.reset();
-        location.href="../select";
+        location.href="../home";
     });
     timer.addEventListener('secondsUpdated', function (e) {
         $('.time-area').html(timer.getTimeValues().toString());

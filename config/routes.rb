@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-    root to:'home#about'
+    root to:'home#start'
     get '/break',to:'home#breaktime'
-    get '/',to:'home#start'
+    get '/home',to:'home#about'
     get '/stopwatch',to:'home#stopwatch'
     get '/result',to:'home#result'
     get '/select',to:'home#select'
