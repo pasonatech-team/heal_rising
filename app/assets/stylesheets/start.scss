@@ -2,13 +2,12 @@
 body#start{
     background-color:#FFF4FF;
    .main-area{
-       width :100%;
+       max-width: 100%;
        margin: 0 auto;
+       margin-top: 45%;
        position: relative;
        img{
-                width: 100%;
-               
-                
-            }
+                max-width: 100%;
+        }
    }
 }
