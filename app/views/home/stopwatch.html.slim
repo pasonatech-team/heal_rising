@@ -1,4 +1,17 @@
 doctype html
+- patarn = rand(2)
+- rank1 = ["もっと早くう・ご・けー", 
+           "もうギブアップしちゃうの？", 
+           "この程度なの？"] 
+- rank2 = ["おぉ～いいねぇ～", 
+           "その調子、その調子～", 
+           "もっともっと！！"] 
+- rank3 = ["運動してるお兄ちゃんもしかしたらかっこいいカモ…？？", 
+           "いい筋肉になってきたんじゃない？終わったら触らせてよ！", 
+           "ふぁいとふぁいとーにぃにならできるぞー！"] 
+- rank4 = ["運動してるお兄ちゃん大好き！", 
+           "これが終わったら背中流してあげる！", 
+           "お兄ちゃんは動いてる時が一番輝いてるよ！"] 
 html
   head
     title
@@ -14,7 +27,15 @@ html
                 =image_tag("home/heal_rising_touka2.png")
                 
                 .talk-area
-                    | 運動中
+                    | 
+                    - if @user.level<10 
+                      = rank1[patarn] 
+                    - elsif @user.level<20 
+                      = rank2[patarn] 
+                    - elsif @user.level<30 
+                      = rank3[patarn] 
+                    - else 
+                      = rank4[patarn] 
         
         
         

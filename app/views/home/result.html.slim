@@ -1,4 +1,9 @@
 doctype html
+- patarn = rand(2) 
+- rank1 = ["運動終了!", 
+           "よくがんばったね", 
+           "すごいすごーい！"] 
+
 html
   head
     title
@@ -18,7 +23,8 @@ html
 
     .bottom-area
         .talk-area
-                    | メッセージは出ないはずだよ
+                    | 
+                    = rank1[patarn] 
         .exp-area
             .level-area
                 .level-now

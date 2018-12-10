@@ -19,6 +19,7 @@ class HomeController < ApplicationController
     
     def stopwatch
       @time=Action.find(1)
+      @user=User.find(1)
     end
     
     def result
