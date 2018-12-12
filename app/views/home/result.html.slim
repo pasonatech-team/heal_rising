@@ -19,7 +19,11 @@ html
                     | 運動しました
 
                 .chara-area
-                    =image_tag("home/heal_rising_touka2.png")
+                    |
+                    - if @user.level<10
+                      =image_tag("home/heal_rising_touka2.png")
+                    - else
+                      =image_tag("home/heal_rising_chara2.png")
 
     .bottom-area
         .talk-area
