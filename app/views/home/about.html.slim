@@ -42,15 +42,19 @@ html
                     = @next_experience
             
             .chara-area
-                =image_tag("home/heal_rising_touka2.png")
+                |
+                - if @user.level<10
+                  =image_tag("home/heal_rising_touka2.png")
+                - else
+                  =image_tag("home/heal_rising_chara2.png")
                 
                 .talk-area
                     |
-                    - if @user.level<10 
+                    - if @user.level<2
                       = rank1[patarn] 
-                    - elsif @user.level<20 
+                    - elsif @user.level<10
                       = rank2[patarn] 
-                    - elsif @user.level<30 
+                    - elsif @user.level<20
                       = rank3[patarn] 
                     - else 
                       = rank4[patarn] 
