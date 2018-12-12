@@ -67,12 +67,52 @@ html
             
 
 javascript:
+
+    $('.chara-area').click(function () {
+        
+        
+        level = gon.level
+
+        var rank1=["もっと早くう・ご・けー", 
+               "もうギブアップしちゃうの？", 
+               "この程度なの？"] 
+        var rank2 = ["今日は運動しないの？最近は頑張ってると思ったのに...", 
+               "動いてるお兄ちゃんかっこよかったのになぁ", 
+               "もっともっと！！", 
+               "運動しないんだったらこっち来ないで", 
+               "どこ触ってるの！？お兄ちゃんのバカ！変態！お兄ちゃんなんか嫌いだもん！"] 
+        var rank3 = ["動きたくてウズウズしちゃってるよ！！", 
+               "今日は運動日和だね！", 
+               "暇だよ〜何かしようよ〜", 
+               "晴れだろうと雨だろうと運動日和には変わらないゼッ！！", 
+               "そういえば日本ではジュースって果汁100%じゃないと”ジュース”って名乗れないんだって〜"] 
+        var rank4 = ["今日もお兄ちゃんと運動したいな〜", 
+               "運動してるお兄ちゃん大好き！", 
+               "…この間は嫌いなんて言ってごめん。嫌い…じゃないからね…？", 
+               "そういえば水着の”ビキニ”ってビキニ湾の水爆実験から来てるんだって〜", 
+               "あんまり調子に乗るなっ！バカッ///"]            
+    
+        var serihu
+        if(level<2){
+            serihu = rank1[Math.floor(Math.random() * rank1.length)];
+        } else if (level<10){
+            serihu = rank2[Math.floor(Math.random() * rank2.length)];
+        } else if (level<20){
+            serihu = rank2[Math.floor(Math.random() * rank3.length)];
+        } else {
+            serihu = rank3[Math.floor(Math.random() * rank4.length)];
+        }
+        $('.talk-area').html(serihu);
+    });
+   
     $('.start-bottom').click(function () {
         location.href="../stopwatch";
     });
     
-    $('.chara-area').click(function () {
-        location.href="../home";
+    
+    
+    $(function() {
+    
     });
     
     

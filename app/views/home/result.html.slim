@@ -39,3 +39,18 @@ html
                 
             .back-button onclick="location.href='/home';" 
                 | ホームへ
+javascript:
+    $('.chara-area').click(function () {
+        level = gon.level
+
+        var rank1=["運動終了!", 
+           "よくがんばったね", 
+           "すごいすごーい！"] 
+            
+    
+        var serihu
+        
+            serihu = rank1[Math.floor(Math.random() * rank1.length)];
+        
+        $('.talk-area').html(serihu);
+    });

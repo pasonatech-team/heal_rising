@@ -5,12 +5,14 @@ class HomeController < ApplicationController
       #@now_experience = @user.experience - experience_sum
       @now_experience = @user.experience.to_i
       @next_experience = (@user.levelup - @now_experience).to_i 
+      gon.level=@user.level
     end 
     
     def breaktime
         @elapsedTime = params[:content]
         p @elapsedTime
         @time=Action.find(1)
+        gon.level=@user.level
     end
     
     def select
@@ -20,6 +22,7 @@ class HomeController < ApplicationController
     def stopwatch
       @time=Action.find(1)
       @user=User.find(1)
+      gon.level=@user.level
     end
     
     def result
@@ -27,6 +30,7 @@ class HomeController < ApplicationController
       @action=Action.find(1)
       @end_time = params[:times]
       @end_time ||= "00:00:00"
+      gon.level=@user.level
       times = @end_time.split(/:|;/).map do |value|
           value.to_i
       end
