@@ -119,3 +119,32 @@ javascript:
     timer.addEventListener('reset', function (e) {
         $('.time-area').html(timer.getTimeValues().toString());
     });
+    
+    $('.chara-area').click(function () {
+        level = gon.level
+
+        var rank1=["もっと早くう・ご・けー", 
+               "もうギブアップしちゃうの？", 
+               "この程度なの？"] 
+        var rank2 = ["おぉ～いいねぇ～", 
+           "その調子、その調子～", 
+           "もっともっと！！"] 
+        var rank3 = ["運動してるお兄ちゃんもしかしたらかっこいいカモ…？？", 
+           "いい筋肉になってきたんじゃない？終わったら触らせてよ！", 
+           "ふぁいとふぁいとーにぃにならできるぞー！"] 
+        var rank4 = ["運動してるお兄ちゃん大好き！", 
+           "これが終わったら背中流してあげる！", 
+           "お兄ちゃんは動いてる時が一番輝いてるよ！"]            
+    
+        var serihu
+        if(level<2){
+            serihu = rank1[Math.floor(Math.random() * rank1.length)];
+        } else if (level<10){
+            serihu = rank2[Math.floor(Math.random() * rank2.length)];
+        } else if (level<20){
+            serihu = rank2[Math.floor(Math.random() * rank3.length)];
+        } else {
+            serihu = rank3[Math.floor(Math.random() * rank4.length)];
+        }
+        $('.talk-area').html(serihu);
+    });

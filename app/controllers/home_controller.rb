@@ -26,11 +26,11 @@ class HomeController < ApplicationController
     end
     
     def result
-      gon.level=@user.level
       @user=User.find(1)
       @action=Action.find(1)
       @end_time = params[:times]
       @end_time ||= "00:00:00"
+      gon.level=@user.level
       times = @end_time.split(/:|;/).map do |value|
           value.to_i
       end
